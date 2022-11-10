@@ -6,6 +6,7 @@
     - Hooks;
     - Eventos;
     - Fomulários;
+    - Validações;
     - Componentização;
 
 <br/>
