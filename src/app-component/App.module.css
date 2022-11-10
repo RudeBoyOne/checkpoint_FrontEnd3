@@ -27,12 +27,14 @@
 }
 
 .form div div input{
+  font-size: 16px;
   height: 48px;
   width: 558px;
   left: 32px;
   top: 232px;
   border-radius: 12px;
   background: #353535;
+  color: #FFFFFF;
 } 
 
 .form .buttonEnvio{
@@ -44,6 +46,7 @@
   margin-right: 16px;
   background: #36CE7C;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .boxTitulo{

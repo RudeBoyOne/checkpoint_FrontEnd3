@@ -29,6 +29,7 @@
 }
   
 .formError div div input{
+    font-size: 16px;
     height: 48px;
     width: 558px;
     left: 32px;
@@ -49,6 +50,7 @@
     margin-right: 16px;
     background: #36CE7C;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 .tituloError {

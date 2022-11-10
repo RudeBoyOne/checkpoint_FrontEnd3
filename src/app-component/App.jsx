@@ -27,11 +27,8 @@ function App() {
       setErrorForm("Por favor, verifique os dados inseridos no formulário")
     }else{
       setCards([...cards ,{nome: form.nome, cor: form.cor}]);
+      setForm({nome: "", cor: ""})
       setErrorForm("");
-      console.log(cards);
-      console.log(form.nome);
-      console.log(form.cor);
-      console.log(cards);
     }
 
 
@@ -48,17 +45,25 @@ function App() {
               <br />
               <input  type="text" 
                       name='nomeCor'
-                      onChange={(event) => setForm({...form, nome: event.target.value})}/>
+                      onChange={(event) => setForm({...form, nome: event.target.value})}
+                      value={form.nome}
+                    />
             </div>
             <div>
               <label htmlFor="corHex">Cor</label>
               <br />
               <input  type="text" 
                       name='corHex'
-                      onChange={(event) => setForm({...form, cor: event.target.value})}/>
+                      onChange={(event) => setForm({...form, cor: event.target.value})}
+                      value={form.cor}
+                      />
             </div>
           </div>
-          <button type="submit" className= {errorForm ?  AppCssError.buttonEnvio : AppCss.buttonEnvio}>ADICIONAR</button>
+          <button
+                type="submit" 
+                className= {errorForm.length <= 0 ?  AppCss.buttonEnvio : AppCssError.buttonEnvio}
+                disabled = {form.nome.length < 0 && form.cor.length < 0 ? true : false}
+                >ADICIONAR</button>
         </form>
       <h3 className= {errorForm ?  AppCssError.tituloError : AppCss.tituloError} >{errorForm}</h3>
       <div className={AppCss.containerCards}>
